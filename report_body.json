@@ -52,5 +52,35 @@
       "lineNumber": 1234,
       "columnNumber": 42
     }
+  },
+  {
+    "name": "COEP violation report body",
+    "type": "coep",
+    "body": {
+      "blockedURL": "https://test.example/",
+      "disposition": "enforce",
+      "type": "corp"
+    }
+  },
+  {
+    "name": "COOP violation report body type - navigation-from-response",
+    "type": "coop",
+    "body": {
+      "disposition": "enforce",
+      "effectivePolicy": "same-origin",
+      "nextResponseURL": "https://test.example/popup",
+      "type": "navigation-from-response"
+    }
+  },
+  {
+    "name": "COOP violation report body type - navigation-to-response",
+    "type": "coop",
+    "body": {
+      "disposition": "enforce",
+      "effectivePolicy": "same-origin-allow-popups",
+      "previousResponseURL": "",
+      "referrer": "https://test.example/",
+      "type": "navigation-to-response"
+    }
   }
 ]
