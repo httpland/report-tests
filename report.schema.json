@@ -1,0 +1,51 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "Described report body",
+        "type": "string"
+      },
+      "input": {
+        "description": "Actual input",
+        "type": "object",
+        "properties": {
+          "age": {
+            "type": "number"
+          },
+          "url": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "body": {
+            "oneOf": [{
+              "type": "object",
+              "patternProperties": {
+                ".*": {
+                  "oneOf": [
+                    { "type": "array" },
+                    { "type": "boolean" },
+                    { "type": "null" },
+                    { "type": "number" },
+                    { "type": "object" },
+                    { "type": "string" }
+                  ]
+                }
+              }
+            }, {
+              "type": "null"
+            }]
+          }
+        },
+        "required": ["age", "url", "type", "body"]
+      },
+      "valid": {
+        "type": "boolean"
+      }
+    },
+    "required": ["name", "input", "valid"]
+  }
+}

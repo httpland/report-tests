@@ -31,6 +31,12 @@
         "/report_body.json"
       ],
       "url": "./report_body.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/report.json"
+      ],
+      "url": "./report.schema.json"
     }
   ]
 }

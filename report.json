@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Valid unknown report",
+    "input": {
+      "age": 0,
+      "url": "",
+      "type": "",
+      "body": null
+    },
+    "valid": true
+  },
+  {
+    "name": "Empty body report",
+    "input": {
+      "age": 100,
+      "url": "https://test.example/",
+      "type": "unknown",
+      "body": {}
+    },
+    "valid": true
+  },
+  {
+    "name": "CSP violation report",
+    "input": {
+      "age": 100,
+      "url": "https://test.example/",
+      "type": "csp-violation",
+      "body": {
+        "blockedURL": "inline",
+        "disposition": "enforce",
+        "documentURL": "https://test.example/",
+        "effectiveDirective": "script-src-elem",
+        "lineNumber": 10,
+        "columnNumber": 0,
+        "originalPolicy": "img-src https://cdn.example.com; script-src https; report-to default",
+        "referrer": "",
+        "sample": "",
+        "sourceFile": "https://test.example/",
+        "statusCode": 200
+      }
+    },
+    "valid": true
+  }
+]
