@@ -82,5 +82,17 @@
       "referrer": "https://test.example/",
       "type": "navigation-to-response"
     }
+  },
+  {
+    "name": "Permissions policy violation report body",
+    "type": "permissions-policy-violation",
+    "body": {
+      "featureId": "geolocation",
+      "message": "Geolocation access has been blocked because of a policy applied to the current document. See https://goo.gl/EuHzyv for more details.",
+      "source_file": "https://a.featurepolicy.rocks/geolocation.html",
+      "line_number": 20,
+      "column_number": 37,
+      "disposition": "enforce"
+    }
   }
 ]
