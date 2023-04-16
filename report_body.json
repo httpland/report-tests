@@ -8,6 +8,7 @@
       "documentURL": "https://test.example/",
       "effectiveDirective": "script-src-elem",
       "lineNumber": 10,
+      "columnNumber": 0,
       "originalPolicy": "img-src https://cdn.example.com; script-src https; report-to default",
       "referrer": "",
       "sample": "",
