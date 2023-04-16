@@ -1,0 +1,35 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "Described report body",
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "description": "Report type"
+      },
+      "body": {
+        "type": "object",
+        "description": "Report body",
+
+        "patternProperties": {
+          ".*": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" },
+              { "type": "null" },
+              { "type": "object" },
+              { "type": "array" }
+            ]
+          }
+        }
+      }
+    },
+
+    "required": ["name", "type", "body"]
+  }
+}

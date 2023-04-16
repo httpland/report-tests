@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Script src elem violation report of CSP",
+    "type": "csp-violation",
+    "body": {
+      "blockedURL": "inline",
+      "disposition": "enforce",
+      "documentURL": "https://test.example/",
+      "effectiveDirective": "script-src-elem",
+      "lineNumber": 10,
+      "originalPolicy": "img-src https://cdn.example.com; script-src https; report-to default",
+      "referrer": "",
+      "sample": "",
+      "sourceFile": "https://test.example/",
+      "statusCode": 200
+    }
+  },
+  {
+    "name": "Intervention report body",
+    "type": "intervention",
+    "body": {
+      "id": "audio-no-gesture",
+      "message": "A request to play audio was blocked because it was not triggered by user activation (such as a click).",
+      "sourceFile": "https://test.example/index.js",
+      "lineNumber": 1234,
+      "columnNumber": 42
+    }
+  },
+  {
+    "name": "Crash report body for unresponsive",
+    "type": "crash",
+    "body": {
+      "reason": "unresponsive"
+    }
+  },
+  {
+    "name": "Crash report body for out of memory",
+    "type": "crash",
+    "body": {
+      "reason": "oom"
+    }
+  },
+  {
+    "name": "Deprecation report body",
+    "type": "deprecation",
+    "body": {
+      "id": "websql",
+      "anticipatedRemoval": "2020-01-01",
+      "message": "WebSQL is deprecated and will be removed in Chrome 97 around January 2020",
+      "sourceFile": "https://example.com/index.js",
+      "lineNumber": 1234,
+      "columnNumber": 42
+    }
+  }
+]
